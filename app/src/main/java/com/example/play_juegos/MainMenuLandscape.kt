@@ -1,0 +1,70 @@
+// MainMenu.kt
+package com.example.play_juegos
+
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+
+@Composable
+fun MainMenuLandscape(navController: NavController, modifier: Modifier = Modifier) {
+
+    Column(
+        modifier = modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = "Play Juegos",
+            fontSize = 50.sp
+        )
+        Spacer(modifier = Modifier.height(40.dp))
+
+        Row(
+        ) {
+            Button(
+                onClick = {navController.navigate("jugar")},
+                content = { Text(
+                    text = "Play",
+                    fontSize = 40.sp) },
+                modifier = modifier.width(200.dp).height(60.dp)
+            )
+            Button(
+                onClick = {},
+                content = { Text(
+                    text = "New Player",
+                    fontSize = 40.sp) },
+                modifier = modifier.width(200.dp).height(60.dp)
+            )
+        }
+        Row(
+        ) {
+            Button(
+                onClick = {},
+                content = { Text(
+                    text = "Preferences",
+                    fontSize = 40.sp) },
+                modifier = modifier.width(200.dp).height(60.dp)
+            )
+            Button(
+                onClick = {},
+                content = { Text(
+                    text = "About",
+                    fontSize = 40.sp) },
+                modifier = modifier.width(200.dp).height(60.dp)
+            )
+        }
+    }
+}

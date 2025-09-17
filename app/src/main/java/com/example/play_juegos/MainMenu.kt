@@ -6,18 +6,19 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 
 @Composable
-fun MainMenu(modifier: Modifier = Modifier) {
+fun MainMenu(navController: NavController, modifier: Modifier = Modifier) {
 
     Column(
         modifier = modifier.fillMaxSize(),
@@ -26,22 +27,44 @@ fun MainMenu(modifier: Modifier = Modifier) {
     ) {
         Text(
             text = "Play Juegos",
-            fontSize = 40.sp
+            fontSize = 60.sp,
+            style = MaterialTheme.typography.titleMedium,
+            //fontStyle = FontFamily.Cursive
         )
 
         Spacer(modifier = Modifier.height(40.dp))
 
         Button(
-            onClick = {},
-            content = { Text("Play") },
-            modifier = modifier.width(120.dp).height(50.dp)
+            onClick = { navController.navigate("jugar") },
+            content = { Text(
+                text = "Play",
+                fontSize = 40.sp,
+                style = MaterialTheme.typography.titleMedium) },
+            modifier = modifier.width(300.dp).height(60.dp)
         )
-        Button(onClick = { /* Do something! */ })
-            { Text("New Player") }
-        Button(onClick = { /* Do something! */ })
-            { Text("Preferences") }
-        Button(onClick = { /* Do something! */ })
-            { Text("About") }
-
+        Button(
+            onClick = {},
+            content = { Text(
+                text = "New Player",
+                fontSize = 40.sp,
+                style = MaterialTheme.typography.titleMedium) },
+            modifier = modifier.width(300.dp).height(60.dp)
+        )
+        Button(
+            onClick = {},
+            content = { Text(
+                text = "Preferences",
+                fontSize = 40.sp,
+                style = MaterialTheme.typography.titleMedium) },
+            modifier = modifier.width(300.dp).height(60.dp)
+        )
+        Button(
+            onClick = {},
+            content = { Text(
+                text = "About",
+                fontSize = 40.sp,
+                style = MaterialTheme.typography.titleMedium) },
+            modifier = modifier.width(300.dp).height(60.dp)
+        )
     }
 }
