@@ -1,7 +1,6 @@
 package com.example.play_juegos
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -11,24 +10,27 @@ import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.AbsoluteAlignment
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 
 @Composable
 fun PlayMenu(modifier: Modifier = Modifier) {
+
+    var nombre by remember { mutableStateOf(" ")}
+    var apellidos by remember { mutableStateOf(" ") }
+    var telefono by remember { mutableStateOf(" ") }
+    var email by remember { mutableStateOf(" ") }
+
     Column (
         modifier = modifier.fillMaxSize()
+
     ) {
         Row (
             verticalAlignment = Alignment.CenterVertically
@@ -39,11 +41,9 @@ fun PlayMenu(modifier: Modifier = Modifier) {
                 modifier = Modifier.requiredSize(60.dp)
             )
 
-            var outlinedTextField by remember { mutableStateOf(" ") }
-
             OutlinedTextField(
-                value = outlinedTextField,
-                onValueChange = {outlinedTextField = it},
+                value = nombre,
+                onValueChange = {nombre = it},
                 label = { Text(text = "Nombre") },
                 modifier = Modifier.padding(40.dp),
             )
@@ -54,11 +54,9 @@ fun PlayMenu(modifier: Modifier = Modifier) {
         ) {
             Spacer(modifier = Modifier.width(60.dp))
 
-            var outlinedTextField by remember { mutableStateOf(" ") }
-
             OutlinedTextField(
-                value = outlinedTextField,
-                onValueChange = {outlinedTextField = it},
+                value = apellidos,
+                onValueChange = {apellidos = it},
                 label = { Text(text = "Apellidos") },
                 modifier = Modifier.padding(40.dp),
             )
@@ -69,11 +67,11 @@ fun PlayMenu(modifier: Modifier = Modifier) {
         ) {
             Spacer(modifier = Modifier.width(60.dp))
 
-            var outlinedTextField by remember { mutableStateOf(" ") }
+            var apodo by remember { mutableStateOf(" ") }
 
             OutlinedTextField(
-                value = outlinedTextField,
-                onValueChange = {outlinedTextField = it},
+                value = apodo,
+                onValueChange = {apodo = it},
                 label = { Text(text = "Nickname") },
                 modifier = Modifier.padding(40.dp),
             )
@@ -100,11 +98,9 @@ fun PlayMenu(modifier: Modifier = Modifier) {
                 modifier = Modifier.requiredSize(60.dp),
             )
 
-            var outlinedTextField by remember { mutableStateOf(" ") }
-
             OutlinedTextField(
-                value = outlinedTextField,
-                onValueChange = {outlinedTextField = it},
+                value = telefono,
+                onValueChange = {telefono = it},
                 label = { Text(text = "Teléfono") },
                 modifier = Modifier.padding(40.dp),
             )
@@ -118,11 +114,10 @@ fun PlayMenu(modifier: Modifier = Modifier) {
                 contentDescription = "Email Icon",
                 modifier = Modifier.requiredSize(60.dp)
             )
-            var outlinedTextField by remember { mutableStateOf(" ") }
 
             OutlinedTextField(
-                value = outlinedTextField,
-                onValueChange = {outlinedTextField = it},
+                value = email,
+                onValueChange = {email = it},
                 label = { Text(text = "Email") },
                 modifier = Modifier.padding(40.dp),
             )
