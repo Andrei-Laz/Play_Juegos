@@ -39,14 +39,14 @@ fun MainMenuLandscape(navController: NavController, modifier: Modifier = Modifie
                 content = { Text(
                     text = "Play",
                     fontSize = 40.sp) },
-                modifier = modifier.width(200.dp).height(60.dp)
+                modifier = modifier.width(300.dp).height(70.dp)
             )
             Button(
                 onClick = {},
                 content = { Text(
                     text = "New Player",
                     fontSize = 40.sp) },
-                modifier = modifier.width(200.dp).height(60.dp)
+                modifier = modifier.width(300.dp).height(70.dp)
             )
         }
         Row(
@@ -56,14 +56,14 @@ fun MainMenuLandscape(navController: NavController, modifier: Modifier = Modifie
                 content = { Text(
                     text = "Preferences",
                     fontSize = 40.sp) },
-                modifier = modifier.width(200.dp).height(60.dp)
+                modifier = modifier.width(300.dp).height(70.dp)
             )
             Button(
                 onClick = {},
                 content = { Text(
                     text = "About",
                     fontSize = 40.sp) },
-                modifier = modifier.width(200.dp).height(60.dp)
+                modifier = modifier.width(300.dp).height(70.dp)
             )
         }
     }
