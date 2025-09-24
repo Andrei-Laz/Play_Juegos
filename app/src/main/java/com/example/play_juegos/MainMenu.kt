@@ -50,6 +50,7 @@ fun MainMenu(navController: NavController, modifier: Modifier = Modifier) {
                 style = MaterialTheme.typography.titleMedium) },
             modifier = modifier.width(300.dp).height(60.dp)
         )
+
         Button(
             onClick = {},
             content = { Text(
@@ -58,6 +59,7 @@ fun MainMenu(navController: NavController, modifier: Modifier = Modifier) {
                 style = MaterialTheme.typography.titleMedium) },
             modifier = modifier.width(300.dp).height(60.dp)
         )
+
         Button(
             onClick = {},
             content = { Text(
