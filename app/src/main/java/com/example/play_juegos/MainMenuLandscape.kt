@@ -35,14 +35,14 @@ fun MainMenuLandscape(navController: NavController, modifier: Modifier = Modifie
         Row(
         ) {
             Button(
-                onClick = {navController.navigate("jugar")},
+                onClick = {},
                 content = { Text(
                     text = "Play",
                     fontSize = 40.sp) },
                 modifier = modifier.width(300.dp).height(70.dp)
             )
             Button(
-                onClick = {},
+                onClick = {navController.navigate("newPlayer")},
                 content = { Text(
                     text = "New Player",
                     fontSize = 40.sp) },

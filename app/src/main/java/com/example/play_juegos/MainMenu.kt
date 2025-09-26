@@ -35,7 +35,7 @@ fun MainMenu(navController: NavController, modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.height(40.dp))
 
         Button(
-            onClick = { navController.navigate("jugar") },
+            onClick = {},
             content = { Text(
                 text = "Play",
                 fontSize = 40.sp,
@@ -43,7 +43,7 @@ fun MainMenu(navController: NavController, modifier: Modifier = Modifier) {
             modifier = modifier.width(300.dp).height(60.dp)
         )
         Button(
-            onClick = {},
+            onClick = {navController.navigate("newPlayer")},
             content = { Text(
                 text = "New Player",
                 fontSize = 40.sp,

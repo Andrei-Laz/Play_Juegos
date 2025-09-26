@@ -48,9 +48,9 @@ class MainActivity : ComponentActivity() {
                             }
                         }
 
-                        composable("jugar") {
-                            PlayMenu(
-                                modifier = Modifier.padding(innerPadding)
+                        composable("newPlayer") {
+                            NewPlayerMenu(
+                                modifier = Modifier.padding()
                             )
                         }
                     }
