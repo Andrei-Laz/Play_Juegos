@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Play_JuegosTheme {
+            Play_JuegosTheme() {
                 val navController = rememberNavController()
                 val configuration = LocalConfiguration.current
 

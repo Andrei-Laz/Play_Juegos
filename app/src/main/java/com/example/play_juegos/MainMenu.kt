@@ -40,8 +40,9 @@ fun MainMenu(navController: NavController, modifier: Modifier = Modifier) {
                 text = "Play",
                 fontSize = 40.sp,
                 style = MaterialTheme.typography.titleMedium) },
-            modifier = modifier.width(300.dp).height(60.dp)
+            modifier = modifier.width(300.dp).height(60.dp),
         )
+
         Button(
             onClick = {navController.navigate("newPlayer")},
             content = { Text(
