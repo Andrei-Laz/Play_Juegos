@@ -28,7 +28,7 @@ private val LightColorScheme = lightColorScheme(
     primary = naranjaBrillante,
     onPrimary = Color.Black,
     primaryContainer = naranjaBrillante,
-    onPrimaryContainer = Color.Black,
+    onPrimaryContainer = Color.White,
     secondary = amarilloNeon,
     onSecondary = Color.Black,
     tertiary = verdeLima,
@@ -36,7 +36,7 @@ private val LightColorScheme = lightColorScheme(
     background = grisOscuro,
     onBackground = amarilloNeon,
     surface = grisOscuro,
-    onSurface = Color.Black,
+    onSurface = Color.White,
     error = rojoClaro,
     onError = Color.Black
 )

@@ -48,8 +48,20 @@ class MainActivity : ComponentActivity() {
                             }
                         }
 
+                        composable(route = "Play") {
+                            PlayMenu(
+                                modifier = Modifier.padding()
+                            )
+                        }
+
                         composable("newPlayer") {
                             NewPlayerMenu(
+                                modifier = Modifier.padding()
+                            )
+                        }
+
+                        composable( route = "Preferences") {
+                            PreferencesMenu(
                                 modifier = Modifier.padding()
                             )
                         }
